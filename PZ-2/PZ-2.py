@@ -1,8 +1,11 @@
-def full_kilobytes(file_size_bytes):
-    kilobytes = file_size_bytes // 1024
-    return kilobytes
-
-file_size = int(input("Введите размер файла в байтах: "))
-
-full_kilobytes = full_kilobytes(file_size)
-print(f"Количество полных килобайтов, занимаемых файлом: {full_kilobytes} кБ")
+# Дан размер файла в байтах. Используя операцию деления нацело,
+# найти количество полных килобайтов, которые занимает данный файл (1 килобайт = 1024 байта).
+try:
+    file_size = int(input("Введите размер файла в байтах: "))
+    if file_size < 0:
+        print("Число не может быть отрицательным!")
+    else:
+        kylobites = file_size // 1024
+        print(f"В файле {kylobites} КБайта.")
+except ValueError:
+    print("Проверьте правильность ввода данных!")
